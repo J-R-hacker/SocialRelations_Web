@@ -114,7 +114,7 @@ def index(request):
                         'time': time,
                     })
             elif condition == 'chineseName':
-                user_list = Socialusers.objects.filter(chineseName=keywords)
+                user_list = Socialusers.objects.filter(chinesename=keywords)
                 countNum = user_list.count()
                 time = (connection.queries)[0].get('time')
                 print('user_list size=== ', user_list.count())
@@ -168,7 +168,7 @@ def index(request):
                         'time': time,
                     })
             elif condition == 'QQ':
-                user_list = Socialusers.objects.filter(QQ=keywords)
+                user_list = Socialusers.objects.filter(qq=keywords)
                 countNum = user_list.count()
                 time = (connection.queries)[0].get('time')
                 print('user_list size=== ', user_list.count())
