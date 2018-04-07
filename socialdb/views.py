@@ -248,8 +248,8 @@ def index(request):
                         'users': users,
                         'time': time,
                     })
-            elif condition == 'ip_address':
-                user_list = Socialusers.objects.filter(ip_address=keywords)
+            elif condition == 'college':
+                user_list = Socialusers.objects.filter(college=keywords)
                 countNum = user_list.count()
                 time = (connection.queries)[0].get('time')
                 print('user_list size=== ', user_list.count())
@@ -275,8 +275,8 @@ def index(request):
                         'users': users,
                         'time': time,
                     })
-            elif condition == 'college':
-                user_list = Socialusers.objects.filter(college=keywords)
+            elif condition == 'source':
+                user_list = Socialusers.objects.filter(source=keywords)
                 countNum = user_list.count()
                 time = (connection.queries)[0].get('time')
                 print('user_list size=== ', user_list.count())

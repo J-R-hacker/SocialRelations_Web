@@ -38,8 +38,8 @@ CONDITION_CHOICES = (
     ('QQ', 'QQ'),
     ('identity_number', '身份证'),
     ('cell_phone', '电话'),
-    ('ip_address', 'IP 地址'),
     ('college', '大学'),
+    ('source', '来源'),
 )
 
 class QueryUser(models.Model):

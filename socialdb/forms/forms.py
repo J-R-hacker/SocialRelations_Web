@@ -19,8 +19,8 @@ CONDITION_CHOICES = (
     ('QQ', 'QQ'),
     ('identity_number', '身份证'),
     ('cell_phone', '电话'),
-    ('ip_address', 'IP 地址'),
     ('college', '大学'),
+    ('source', '来源'),
 )
 
 # class QueryUserForm(forms.Form):
@@ -37,7 +37,7 @@ CONDITION_CHOICES = (
 #     queryContent = forms.CharField(
 #         max_length=100,
 #         widget=forms.TextInput(attrs={'class': 'form-control is-invalid',
-#                                       'name': 'q',
+#                                       'name': 'queryContent',
 #                                       'placeholder': '请输入需要要查询的内容...'
 #                                       }),
 #         error_messages={'required': '查询内容不能为空 !'}
@@ -58,7 +58,7 @@ class QueryUserForm(ModelForm):
                                     'name':'condition',
                                     }),
             'queryContent':TextInput(attrs={'class': 'form-control is-invalid',
-                                      'name': 'q',
+                                      'name': 'queryContent',
                                       'placeholder': '请输入需要要查询的内容...'
                                       })
         }
